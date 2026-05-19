@@ -1,0 +1,45 @@
+:root {
+    /* ==== Colores principales ==== */
+
+    --p-deep: #091627;
+    --p-dark: #001e76;
+    --p-base: #3d6ff4;
+    --p-soft: #6be4f7;
+    --p-pale: #e4ebf3;
+
+    /* ==== Secundario / Auxiliar (s) ==== */
+
+    --s-deep: #252e3b;
+    --s-dark: #636c7b;
+    --s-base: #868f9e;
+    --s-soft: #8e94a1;
+    --s-alt: #4f6a95;
+
+
+    /* ==== Fuentes ==== */
+    --font-inter: "Inter", sans-serif;
+    --font-jakarta: "Plus Jakarta Sans", sans-serif;
+    --font-geist: "Geist", sans-serif;
+    --font-pixel: "Pixelify Sans", cursive;
+}
+
+/* ==== Reset y Estilos Base ==== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--p-deep);
+    color: var(--p-pale);
+    font-family: var(--font-inter);
+    min-height: 100vh;
+}
+
+a {
+    color: var(--p-base);
+    text-decoration: none;
+}
