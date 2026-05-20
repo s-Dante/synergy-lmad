@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 :root {
     /* ==== Colores principales ==== */
 
     --p-deep: #091627;
     --p-dark: #001e76;
     --p-base: #3d6ff4;
+    --p-base-sec: #406cb2;
     --p-soft: #6be4f7;
     --p-pale: #e4ebf3;
 
@@ -15,8 +17,7 @@
     --s-soft: #8e94a1;
     --s-alt: #4f6a95;
 
-    --s-negative:#874E4E;
-
+    --s-negative: #874e4e;
 
     /* ==== Fuentes ==== */
     --font-inter: "Inter", sans-serif;
