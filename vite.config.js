@@ -11,6 +11,7 @@ export default defineConfig({
                 "resources/js/app.js",
                 "resources/css/global.css",
                 "resources/css/layouts/app.css",
+                "resources/css/components/navbar.css",
             ],
             refresh: true,
             fonts: [

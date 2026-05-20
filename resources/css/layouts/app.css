@@ -1,0 +1,10 @@
+@import url(/resources/css/global.css);
+
+body {
+    background-image: url('/public/assets/bg-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
