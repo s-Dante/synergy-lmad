@@ -15,6 +15,8 @@ if (btnStudent && btnCompany && toggleSlider) {
             inputIdentifier.placeholder = "matrícula";
             inputIdentifier.type = "text";
         }
+
+        alert("Aun no disponible");
     });
 
     btnCompany.addEventListener("click", () => {

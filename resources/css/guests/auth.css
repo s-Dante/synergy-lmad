@@ -42,8 +42,6 @@
     will-change: transform, box-shadow, color;
     transition: all 0.2s ease-out;
     z-index: 10;
-
-    animation: slideInLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 .btn-back:hover {
     color: var(--p-pale);
@@ -238,7 +236,7 @@
     justify-content: center;
     margin-top: 1.8rem;
 
-   /* opacity: 0;
+    /* opacity: 0;
     animation: fadeIn 0.4s ease-out 0.2s forwards;*/
 }
 
