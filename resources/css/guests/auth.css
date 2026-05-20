@@ -1,3 +1,5 @@
+@import url(/resources/css/animations.css);
+
 .auth-wrapper {
     min-height: calc(100vh - 100px);
     display: flex;
@@ -5,6 +7,8 @@
     justify-content: center;
     position: relative;
     padding: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-out forwards;
 }
 
 .btn-back {
@@ -38,6 +42,8 @@
     will-change: transform, box-shadow, color;
     transition: all 0.2s ease-out;
     z-index: 10;
+
+    animation: slideInLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 .btn-back:hover {
     color: var(--p-pale);
@@ -69,6 +75,8 @@
         inset 12px 12px 35px -5px rgba(255, 255, 255, 0.03),
         inset -12px -12px 35px -5px rgba(255, 255, 255, 0.03),
         0 25px 50px -12px rgba(0, 0, 0, 0.7);
+
+    animation: slideUpFade 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 .auth-title {
     font-family: var(--font-geist);
@@ -77,6 +85,9 @@
     color: var(--p-pale);
     text-align: center;
     margin-bottom: 0.2rem;
+
+    /*opacity: 0;
+    animation: fadeIn 0.6s ease-out 0.2s forwards;*/
 }
 .role-toggle-container {
     display: flex;
@@ -96,9 +107,42 @@
         inset -1px -1px 1px rgba(161, 161, 161, 0.378),
         inset -1.5px -1.5px 4px rgba(0, 0, 0, 0.561),
         inset 1px 1px 2px rgba(255, 255, 255, 0.04);
+
+    /* opacity: 0;
+    animation: slideUpFade 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards;*/
 }
+.toggle-slider {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    width: calc(50% - 5px);
+    border-radius: 999px;
+    z-index: 1;
+
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.toggle-slider.pos-company {
+    transform: translateX(100%);
+    background-color: var(--p-base-sec);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.5),
+        inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.25),
+        inset -1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+.toggle-slider.pos-student {
+    transform: translateX(0);
+    background-color: var(--s-soft);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.5),
+        inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
 .btn-toggle {
     flex: 1;
+    position: relative;
+    z-index: 2;
     border: none;
     background: transparent;
     color: var(--s-soft);
@@ -108,9 +152,9 @@
     padding: 0.8rem 1.2rem;
     border-radius: 999px;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    transition: color 0.3s ease;
 }
-
+/* esto era antes de la animación bonita
 .btn-toggle.active-student {
     background-color: var(--s-soft);
     color: var(--p-deep);
@@ -128,6 +172,14 @@
         0 4px 8px rgba(0, 0, 0, 0.5),
         inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.25),
         inset -1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+*/
+
+.btn-toggle.text-active-student {
+    color: var(--p-deep);
+}
+.btn-toggle.text-active-company {
+    color: var(--p-pale);
 }
 
 .auth-form {
@@ -162,10 +214,32 @@
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.6);
 }
 
+/*
+.auth-form .auth-input:nth-child(2) {
+    opacity: 0;
+    animation: slideUpFade 0.4s ease-out 0.4s forwards;
+}
+.auth-form .auth-input:nth-child(3) {
+    opacity: 0;
+    animation: slideUpFade 0.4s ease-out 0.5s forwards;
+}
+.auth-form .auth-input:nth-child(4) {
+    opacity: 0;
+    animation: slideUpFade 0.4s ease-out 0.6s forwards;
+}
+.auth-form .auth-input:nth-child(5) {
+    opacity: 0;
+    animation: slideUpFade 0.4s ease-out 0.7s forwards;
+}
+*/
+
 .auth-actions {
     display: flex;
     justify-content: center;
     margin-top: 1.8rem;
+
+   /* opacity: 0;
+    animation: fadeIn 0.4s ease-out 0.2s forwards;*/
 }
 
 .btn-submit-auth {
@@ -207,7 +281,7 @@
         top: 5rem;
     }
     .auth-actions {
-        margin-top: .6rem;
+        margin-top: 0.6rem;
     }
     .role-toggle-container {
         margin-bottom: 1.2rem;

@@ -13,6 +13,7 @@ export default defineConfig({
                 "resources/css/layouts/app.css",
                 "resources/css/components/navbar.css",
                 "resources/css/guests/auth.css",
+                "resources/js/guests/auth.js",
             ],
             refresh: true,
             fonts: [

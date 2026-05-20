@@ -18,13 +18,15 @@
         <h1 class="auth-title">Registro</h1>
 
         <div class="role-toggle-container">
-            <button type="button" class="btn-toggle">Estudiante</button>
-            <button type="button" class="btn-toggle active-company">Empresa</button>
+            <div class="toggle-slider pos-company" id="toggle-slider"></div>
+
+            <button type="button" class="btn-toggle" id="btn-student">Estudiante</button>
+            <button type="button" class="btn-toggle active-company" id="btn-company">Empresa</button>
         </div>
 
         <form class="auth-form" method="POST" action="...">
             @csrf
-            <input type="email" class="auth-input" placeholder="email">
+            <input type="email" class="auth-input" id="auth-identifier" placeholder="email">
             <input type="text" class="auth-input" placeholder="codigo token">
             <input type="password" class="auth-input" placeholder="contraseña">
             <input type="password" class="auth-input" placeholder="repita contraseña">
@@ -36,3 +38,7 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+@vite(['resources/js/guests/auth.js'])
+@endpush
