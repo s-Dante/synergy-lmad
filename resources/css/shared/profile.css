@@ -208,8 +208,8 @@
 .data-wrapper {
     height: 35vh;
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 2%;
+    grid-template-columns: auto auto 30%;
+    gap: 1%;
 }
 
 .projects-wrapper {
@@ -279,10 +279,17 @@
     gap: 2%;
 }
 
+.contact-card-wrapper{
+    display: grid;
+    grid-template-columns: 25% auto;
+}
+
 .contact-card{
     flex-grow: 1;
-    width: 100%;
     box-sizing: border-box;
 
+    padding: 0.5rem;
+    justify-content: center;
+    align-content: center;
     border-radius: 1.2rem;
 }

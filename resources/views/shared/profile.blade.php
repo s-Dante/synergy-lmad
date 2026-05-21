@@ -97,15 +97,33 @@
 
                 <div class="contact-list">
                     <div class="glass-card contact-card">
-
+                        <div class="contact-card-wrapper">
+                            <img>
+                            <div>
+                                <h3>Contacto</h3>
+                                <p>Tel <b>900 000 0000</b></p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="glass-card contact-card">
-
+                        <div class="contact-card-wrapper">
+                            <img>
+                            <div>
+                                <h3>Contacto</h3>
+                                <p>Tel <b>900 000 0000</b></p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="glass-card contact-card">
-
+                        <div class="contact-card-wrapper">
+                            <img>
+                            <div>
+                                <h3>Contacto</h3>
+                                <p>Tel <b>900 000 0000</b></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
