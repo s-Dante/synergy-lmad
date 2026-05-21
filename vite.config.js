@@ -14,6 +14,7 @@ export default defineConfig({
                 "resources/css/components/navbar.css",
                 "resources/css/guests/auth.css",
                 "resources/js/guests/auth.js",
+                "resources/css/shared/dashboard.css",
             ],
             refresh: true,
             fonts: [

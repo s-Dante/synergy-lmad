@@ -11,3 +11,6 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('guests.register');
 });
+Route::get('/dashboard', function () {
+    return view('shared.dashboard');
+});
