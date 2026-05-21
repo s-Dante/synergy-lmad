@@ -8,7 +8,7 @@
 @endpush
 
 @section('content')
-<div class="dashboard-form" style="max-width: 400px; margin: 0 auto 1rem auto">
+<div class="dashboard-form">
     <input type="text" placeholder="Buscar..." class="auth-input" style="text-align: left; ">
 
 </div>
