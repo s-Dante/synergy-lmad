@@ -1,0 +1,288 @@
+.auth-wrapper {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.btn-back {
+    position: absolute;
+    left: calc(50% - 310px);
+    top: calc(50% - 150px);
+
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+
+    background: transparent;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    border: 0 solid rgba(0, 0, 0, 0.8);
+
+    box-shadow:
+        inset 1.5px 1.5px 0px rgba(255, 255, 255, 0.18),
+        inset -1.5px -1.5px 0px rgba(255, 255, 255, 0.18),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.8),
+        0px 2px 8px rgba(0, 0, 0, 0.4);
+
+    color: var(--s-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transform: translateZ(0);
+    will-change: transform, box-shadow, color;
+    transition: all 0.2s ease-out;
+    z-index: 10;
+}
+.btn-back:hover {
+    color: var(--p-pale);
+
+    transform: translateZ(0) translatex(-1px);
+
+    box-shadow:
+        inset 1.5px 1.5px 1.5px rgba(255, 255, 255, 0.28),
+        inset 2px 2px 12px rgba(255, 255, 255, 0.1),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.8),
+        0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 90px;
+    padding: 1.2rem 3rem;
+    position: relative;
+
+    background-color: rgba(22, 25, 30, 0.55);
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.08"/%3E%3C/svg%3E');
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    box-shadow:
+        inset 1.5px 1.5px 0px rgba(255, 255, 255, 0.116),
+        inset -1.5px -1.5px 0px rgba(255, 255, 255, 0.08),
+        inset 12px 12px 35px -5px rgba(255, 255, 255, 0.03),
+        inset -12px -12px 35px -5px rgba(255, 255, 255, 0.03),
+        0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+.auth-title {
+    font-family: var(--font-geist);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--p-pale);
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+.role-toggle-container {
+    display: flex;
+    font-family: var(--font-jakarta);
+
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-radius: 999px;
+    padding: 5px;
+    margin-bottom: 1.2rem;
+
+    box-shadow:
+        inset 1px 1px 1px rgba(161, 161, 161, 0.378),
+        inset 1.5px 1.5px 4px rgba(0, 0, 0, 0.561),
+        inset -1px -1px 1px rgba(161, 161, 161, 0.378),
+        inset -1.5px -1.5px 4px rgba(0, 0, 0, 0.561),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.04);
+}
+.btn-toggle {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: var(--s-soft);
+    font-family: var(--font-jakarta);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.8rem 1.2rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn-toggle.active-student {
+    background-color: var(--s-soft);
+    color: var(--p-deep);
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.5),
+        inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.8),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+.btn-toggle.active-company {
+    background-color: var(--p-base-sec);
+    color: var(--p-pale);
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.5),
+        inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.25),
+        inset -1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.auth-input {
+    width: 100%;
+
+    background-color: var(--s-deep);
+    border: none;
+    border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+
+    color: var(--p-pale);
+    font-family: var(--font-jakarta);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+
+    box-shadow:
+        inset 0 3px 2px rgba(143, 143, 143, 0.5),
+        inset 0 -3px 2px rgba(0, 0, 0, 0.459);
+}
+.auth-input:focus {
+    background-color: rgba(20, 22, 28, 0.8);
+    border-color: rgba(67, 113, 185, 0.5);
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.auth-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn-submit-auth {
+    background-color: var(--p-base-sec);
+    color: var(--p-pale);
+    border: none;
+    border-radius: 999px;
+    padding: 0.7rem 1.9rem;
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+    box-shadow:
+        inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.25),
+        inset -1px -1px 3px rgba(0, 0, 0, 0.3);
+}
+.btn-submit-auth:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+
+    box-shadow:
+        inset 1.5px 1.5px 4px rgba(255, 255, 255, 0.4),
+        inset -1px -1px 3px rgba(0, 0, 0, 0.3),
+        0px 6px 16px rgba(0, 0, 0, 0.35);
+}
+.btn-submit-auth:active {
+    transform: translateY(1px);
+    filter: brightness(0.95);
+    box-shadow:
+        inset 1.5px 1.5px 2px rgba(255, 255, 255, 0.1),
+        inset 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.profile-main {
+    padding-inline: 12vw;
+    height: auto;
+}
+
+.data-wrapper {
+    height: 35vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2%;
+}
+
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2%;
+    height: 100%;
+}
+
+.abilities-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1%;
+}
+
+.abilities-skills,
+.abilities-dowries {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    height: 110%;
+}
+
+.skill-card,
+.dowry-card {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1%;
+    justify-content: center;
+    align-content: center;
+
+    border-radius: 1rem;
+    background-color: blue;
+}
+
+.skill-card {
+    padding: 0.5rem;
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dowry-card {
+    padding: 0.5rem;
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.data-wrapper h2 {
+    padding-bottom: 1rem;
+}
+
+.projects-card {
+    height: auto;
+    border-radius: 2rem;
+}
+
+.section-profile-abilities h3 {
+    padding-bottom: 0.5rem;
+}
+
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 2%;
+}
+
+.contact-card{
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+
+    border-radius: 1.2rem;
+}
